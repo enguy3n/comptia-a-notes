@@ -1,32 +1,36 @@
-import Button from 'react-bootstrap/Button';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-import Unit1 from './pages/Unit1'
 import './App.css'
-import { Route, Routes, useNavigate } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 
-function TestButton(){
-  const navigate = useNavigate();
+import HeaderNav from './components/HeaderNav';
+import Notes from './components/Notes';
 
-  const handleClick = () => {
-    navigate("/comptia-a-notes/unit1");
-  };
+import Unit1 from './pages/Unit1'
+import Unit2 from './pages/Unit2';
 
-  return(
-    <button onClick={handleClick}>asdasdsadsa</button>
-  )
-}
+// function TestButton(){
+//   const navigate = useNavigate();
+
+//   const handleClick = () => {
+//     navigate("/comptia-a-notes/unit1");
+//   };
+
+//   return(
+//     <button onClick={handleClick}>this is a test component!</button>
+//   )
+// }
 
 function App() {
 
   return (
     <>
-      <TestButton />
+      <HeaderNav />
       <Routes>
-        <Route path="/comptia-a-notes" element={<div>Welcome to the Home page</div>} />
-        <Route path ="/comptia-a-notes/unit1" element={<Unit1 />} />
+        <Route path = "/comptia-a-notes" element={<div className="text-content">This is a home page</div>} />
+        <Route path = "/comptia-a-notes/unit1" element={<Notes unitNumber={1} title="test title" bodyContent={<Unit1 />}/>} />
+        <Route path = "/comptia-a-notes/unit2" element={<Notes unitNumber={2} title="test title" bodyContent={<Unit2 />}/>} />
       </Routes>
-      <Button>Test Bootstrap Button</Button>
     </>
   )
 }
