@@ -1,73 +1,94 @@
-# React + TypeScript + Vite
+# Format This Prettier Later or Something
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## About
+```                                                                                                                                           
+                        ░░░░░░            ░░░░                                                                                              
+                    ░░░░                        ░░░░                                                                                        
+                ░░░░                                ░░░░░░                                                                                  
+            ░░░░                                          ░░░░                                                                              
+          ░░                                                    ░░░░                                                                        
+        ░░                                                            ░░                                                                    
+      ░░                                                                  ░░                                                                
+    ░░                                                                        ░░                                                            
+    ░░                                                                            ░░                                                        
+    ░░                                      ░░░░▒▒░░                          ░░░░░░░░░░                                                    
+    ░░                            ░░░░                                                    ░░    ░░░░                                        
+    ░░                        ░░                                                                          ░░░░░░                            
+    ░░                    ░░                                                                ░░                    ░░                        
+    ░░                  ░░                                                                  ░░                        ░░                    
+                                                                                                                                            
+      ▒▒            ░░                                                                                                                      
+        ░░        ░░                                                                                                            ░░          
+        ░░                                                                                                                        ░░        
+          ░░                                                                      ░░░░░░░░░░░░░░░░░░░░                                    ░░
+            ░░  ░░                    ░░░░░░░░░░▒▒░░░░░░░░▒▒░░░░░░▒▒▒▒▒▒░░░░░░▒▒▒▒▒▒░░░░▒▒▒▒░░░░▒▒░░░░▒▒▒▒░░░░                              
+              ░░░░                ░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░▒▒▒▒░░▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒░░░░░░░░▒▒▒▒░░                            
+                ░░      ░░  ░░░░░░▒▒▓▓██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒░░▒▒░░░░░░                        
+                  ░░░░  ░░░░▒▒▒▒▒▒▒▒██████▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░▒▒░░▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▒▒▒▒░░░░░░░░▒▒░░▒▒░░▒▒▒▒░░░░▒▒░░                      
+                  ░░  ░░░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒░░▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒░░░░▒▒░░░░░░▒▒░░▒▒▒▒░░▒▒░░░░▒▒▒▒▒▒                    
+                    ░░  ░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▒▒░░▒▒░░░░░░░░░░░░░░░░▒▒░░░░▒▒▒▒▒▒▒▒                  
+                        ░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░▒▒▒▒░░▒▒░░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒▒▒▒▒                
+                                    ░░░░░░░░░░░░▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒░░▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒░░                
+                                          ░░░░░░░░░░░░░░▒▒▒▒▒▒░░░░▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▒▒░░▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒░░░░░░              
+                                            ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▒▒░░░░░░░░░░░░░░░░▒▒░░░░░░▒▒░░              
+                                              ░░        ░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒░░▒▒░░░░░░░░░░░░░░▒▒░░░░░░░░            
+                                                                ░░░░░░░░  ░░    ░░░░░░▒▒░░▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒░░░░            
+                                                            ░░                ░░░░░░░░▒▒░░░░▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒            
+                                                          ░░                  ░░░░░░░░░░░░░░▒▒░░  ░░▒▒░░░░▒▒▒▒░░░░░░░░░░▒▒▒▒▒▒░░            
+                                                                              ░░░░░░░░░░░░▒▒░░    ░░▒▒░░░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒░░            
+                                                                              ░░░░░░░░    ░░░░  ░░▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░▒▒░░            
+                                                                                  ░░░░    ░░░░  ░░░░░░    ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒            
+                                                                                                          ░░░░░░░░░░░░░░▒▒▒▒▒▒▒▒            
+                                                                                                            ░░░░░░░░░░░░▒▒▒▒▒▒▒▒            
+                                                                                                            ░░░░░░░░░░░░▒▒▒▒▒▒░░            
+                                                                                                            ░░░░░░░░░░░░░░▒▒░░░░            
+                                                                                                              ░░░░░░░░░░░░░░░░▒▒            
+                                                                                                              ░░░░░░░░░░░░▒▒░░▒▒            
+                                                                                                              ░░░░░░░░▒▒▒▒▒▒░░░░            
+                                                                                                              ░░░░░░░░▒▒▒▒░░░░              
+                                                                                                              ░░░░░░░░▒▒▒▒▒▒▒▒              
+                                                                                                              ░░░░░░▒▒▒▒▒▒▒▒░░              
+                                                                                                              ░░░░░░▒▒▒▒▒▒▒▒                
+                                                                                                            ░░░░▒▒▒▒▒▒▒▒▒▒▒▒                
+                                                                                                          ░░▒▒▒▒▒▒▒▒▒▒▒▒                    
+                                                                                                          ▒▒▒▒▒▒▒▒▒▒▒▒▒▒                    
+                                                                                                        ░░▒▒▒▒▒▒▒▒▒▒▒▒                      
+                                                                                                        ▒▒▒▒▒▒▒▒▒▒▒▒░░                      
+                                                                                                        ▒▒▒▒▒▒▒▒▒▒▒▒                        
+                                                                                                      ░░▒▒▒▒▒▒▒▒▒▒░░                        
+                                                                                                      ▒▒▒▒▒▒▒▒▒▒▒▒                          
+                                                                                                      ▓▓▒▒▒▒▒▒▒▒                            
+                                                                                                    ░░▒▒▒▒▒▒▒▒░░                            
+                                                                                                    ▒▒▒▒▒▒▒▒░░                              
+                                                                                                    ▒▒▒▒▒▒░░                                
+                                                                                                  ░░▒▒▒▒░░                   it's that shrimple (update later)               
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Active Development Preview
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+An active preview of the app that updates when changes are saved to files can be activated with `npx vite`. This preview runs on port 5173 (`http://localhost:5173/comptia-a-notes/`). To quit vite, type `q` and hit `enter`.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Build and Deployment
+
+Before commiting changes, run `npm run build` to rebuild the `dist` folder that Github Actions deploys from. The build from the `dist` folder can then be previewed using `npm run preview` on port 8080 (`http://localhost:8080/comptia-a-notes/`). To quit the preview, type `q` and hit `enter`.
+
+## Development Notes
+
+To create a new "page" a new `<Route />` for it must be initialized in `src/App.tsx`. It should then be navigable to somewhere in the code, most likely in the navbar, so component `HeaderNav` should be updated.
+
+To ensure links function properly, standard HTML tag `<a>` is not used and is instead replaced by a React component `RouterLink` with attributes `href` representing the link and `bodyText` to represent what the link should say.
+
+## TODO
+
+- Finish adding Core 1 sections
+- Add section scrolling capabilities to links
+- CSS formating: make site more pleasant to look at
+  - HIGH PRIORITY: FIX LINK APPEARANCES
+- Format README better
+
+### Future Plans
+
+ - Add section cats + cat customizability
+ - Add index/table of contents
+ - Add quiz section
+ - Add an "about" page
