@@ -14,3 +14,29 @@
 .text-content{
   padding: 0 var(--text-margin);
 }
+
+.ul-hidden{
+    list-style-type: none;
+}
+
+.ul-flat{
+    padding-left: 0;
+}
+
+.definition > b{
+    color:rgb(0, 97, 97);
+}
+
+.code{
+    font-family: monospace, sans-serif;
+    background-color: rgb(230, 230, 230);
+    border-radius: 5px;
+}
+
+table, td, th {
+    border: 1px solid black;
+}
+
+.link{
+  color: green;
+}
